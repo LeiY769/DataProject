@@ -8,8 +8,8 @@ CREATE TABLE SERVICE (
 
 CREATE TABLE REGION(
     id INT PRIMARY KEY, -- id of the region, autoincrement
-    name VARCHAR(255) NOT NULL, -- name of the region
-)
+    name VARCHAR(255) NOT NULL -- name of the region
+) ;
 
 -- For UNIQUE_STATION
 CREATE TABLE STATIONS (
@@ -17,16 +17,15 @@ CREATE TABLE STATIONS (
     name VARCHAR(255) NOT NULL, -- name of the station
     region INT NOT NULL, -- region of the station
     latitude DOUBLE PRECISION NOT NULL, -- latitude of the station
-    longitude DOUBLE PRECISION NOT NULL -- longitude of the station
+    longitude DOUBLE PRECISION NOT NULL, -- longitude of the station
 
     FOREIGN KEY (region) REFERENCES REGION(id)
 ) ;
 
 CREATE TABLE RELATION(
     id INT PRIMARY KEY, -- id of the relation, autoincrement
-    name VARCHAR(255) NOT NULL, -- name of the relation
+    name VARCHAR(255) NOT NULL -- name of the relation
 );
-
 
 
 CREATE TABLE TRAIN_DATA(
@@ -47,7 +46,7 @@ CREATE TABLE TRAIN_DATA(
     station_departure INT,
     station_arrival INT,
 
-    FOREIGN KEY (relation) REFERENCES RELATION(id)
+    FOREIGN KEY (relation) REFERENCES RELATION(id),
     FOREIGN KEY (train_service) REFERENCES SERVICE(id),
     FOREIGN KEY (ptcar_name) REFERENCES STATIONS(id),
     FOREIGN KEY (station_departure) REFERENCES STATIONS(id),
@@ -73,9 +72,9 @@ CREATE TABLE WEATHER (
     diffuse_radiation REAL NOT NULL,
     direct_normal_irradiance REAL NOT NULL,
     et0_fao_evapotranspiration REAL NOT NULL,
+    REGION INT NOT NULL,
     date DATE NOT NULL,
     hour TIME NOT NULL,
-    REGION INT NOT NULL,
 
     FOREIGN KEY (REGION) REFERENCES REGION(id)
 ) ;
