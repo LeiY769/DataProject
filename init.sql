@@ -79,4 +79,9 @@ CREATE TABLE WEATHER (
     FOREIGN KEY (REGION) REFERENCES REGION(id)
 ) ;
 
+CREATE TABLE type_day (
+    date DATE NOT NULL,
+    holiday int NOT NULL
+) ;
+
 COMMIT;
