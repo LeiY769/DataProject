@@ -1,3 +1,6 @@
+#The compression of the dataset is done by converting most of the string by int using maps, in order to decrease the size of the dataset.
+#The column relation-direction is also split into start and end in order to facilitate later analysis.
+
 import pandas as pd
 import numpy as np
 import os

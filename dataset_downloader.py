@@ -1,3 +1,5 @@
+#Simple file that will scrape the dataset using every link found in dataset.csv
+
 import os
 import requests
 import pandas as pd
