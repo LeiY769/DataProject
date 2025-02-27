@@ -40,6 +40,21 @@
    ```
 3. Click **Save** to connect.
 
+## Documentation
+
+The main part of Exploratory Data Analysis is done in those two files
+- `eda.ipynb`
+- `eda_meteo.ipynb`
+
+Files listed here are for setup purposes
+- `download_dataset.py` : Simple file that will scrape the dataset using every link found in dataset.csv
+- `compress_dataset.py`: The compression of the dataset is done by converting most of the string by int using maps, in order to decrease the size of the dataset.
+- `add_regions.ipynb` : This file is used to map the stations to their respective regions, along with the longitude and latitude of each station and store it in the file better_station.csv
+- `date.ipynb` : This file will check for each day if they are either a day of the week, a week-end day a school holiday or a national holiday
+- `init.sql` : SQL script to initialise tables in the database
+- `meteo.ipynb` : This file scrapes the meteo for each region using the open-meteo api
+- `import_db.ipynb` : Import every csv file into their respective table in the database.
+
 
 ## Authors
 Said, Lei and Manu
