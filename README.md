@@ -3,7 +3,7 @@
 ## Preparation
 1. Download the dataset by running:  
    ```sh
-   python dataset_downloadey.py
+   python dataset_downloader.py
    ```
 2. Compress the dataset by running:  
    ```sh
