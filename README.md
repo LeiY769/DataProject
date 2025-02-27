@@ -43,8 +43,8 @@
 ## Documentation
 
 The main part of Exploratory Data Analysis is done in those two files
-- `eda.ipynb`
-- `eda_meteo.ipynb`
+- `eda.ipynb` : Exploratory Data Analysis for everything related to trains.
+- `eda_meteo.ipynb` : Exploratory Data Analysis for only the weather.
 
 Files listed here are for setup purposes
 - `download_dataset.py` : Simple file that will scrape the dataset using every link found in dataset.csv
@@ -57,4 +57,6 @@ Files listed here are for setup purposes
 
 
 ## Authors
-Said, Lei and Manu
+- Hormat Saïd
+- Yang Lei
+- Houyon Manuel
