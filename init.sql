@@ -24,7 +24,8 @@ CREATE TABLE STATIONS (
 
 CREATE TABLE RELATION(
     id INT PRIMARY KEY, -- id of the relation, autoincrement
-    name VARCHAR(255) NOT NULL -- name of the relation
+    name VARCHAR(255) NOT NULL, -- name of the relation
+    type INT NOT NULL -- type of the relation
 );
 
 
@@ -85,5 +86,14 @@ CREATE TABLE type_day (
     weekend boolean NOT NULL,
     day_after_rest boolean NOT NULL
 ) ;
+
+CREATE TABLE province(
+
+    id INT PRIMARY KEY, -- id of the province, autoincrement
+    province VARCHAR(255) NOT NULL -- name of the province
+    REGION INT NOT NULL, -- region of the province
+    FOREIGN KEY (REGION) REFERENCES REGION(id)
+) ;
+
 
 COMMIT;
