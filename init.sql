@@ -81,7 +81,9 @@ CREATE TABLE WEATHER (
 
 CREATE TABLE type_day (
     date DATE NOT NULL,
-    holiday int NOT NULL
+    holiday int NOT NULL,
+    weekend boolean NOT NULL,
+    day_after_rest boolean NOT NULL
 ) ;
 
 COMMIT;
