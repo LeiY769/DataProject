@@ -90,7 +90,7 @@ CREATE TABLE type_day (
 CREATE TABLE province(
 
     id INT PRIMARY KEY, -- id of the province, autoincrement
-    province VARCHAR(255) NOT NULL -- name of the province
+    province VARCHAR(255) NOT NULL, -- name of the province
     REGION INT NOT NULL, -- region of the province
     FOREIGN KEY (REGION) REFERENCES REGION(id)
 ) ;
