@@ -55,31 +55,6 @@ CREATE TABLE TRAIN_DATA(
 ) ;
 
 
-CREATE TABLE WEATHER (
-    temperature_2m REAL NOT NULL,
-    apparent_temperature REAL NOT NULL,
-    dewpoint_2m REAL NOT NULL,  
-    relative_humidity_2m REAL NOT NULL,
-    precipitation REAL NOT NULL,
-    rain REAL NOT NULL,
-    snowfall  REAL NULL,
-    cloudcover INT NOT NULL,
-    cloudcover_low INT NOT NULL,
-    cloudcover_mid INT NOT NULL,
-    cloudcover_high INT NOT NULL,
-    windgusts_10m REAL NOT NULL,
-    shortwave_radiation REAL NOT NULL,
-    direct_radiation REAL NOT NULL,
-    diffuse_radiation REAL NOT NULL,
-    direct_normal_irradiance REAL NOT NULL,
-    et0_fao_evapotranspiration REAL NOT NULL,
-    REGION INT NOT NULL,
-    date DATE NOT NULL,
-    hour TIME NOT NULL,
-
-    FOREIGN KEY (REGION) REFERENCES REGION(id)
-) ;
-
 CREATE TABLE type_day (
     date DATE NOT NULL,
     holiday int NOT NULL,
@@ -95,5 +70,22 @@ CREATE TABLE province(
     FOREIGN KEY (REGION) REFERENCES REGION(id)
 ) ;
 
+
+CREATE TABLE WEATHER (
+    temperature REAL NOT NULL,
+    dewpoint REAL NOT NULL, 
+    relative_humidity REAL NOT NULL,
+    precipitation REAL NOT NULL,
+    snowfall  REAL NOT NULL,
+    wind_direction REAL NOT NULL,
+    wind_speed REAL NOT NULL,
+    pressure REAL NOT NULL,
+
+    province INT NOT NULL,
+    date DATE NOT NULL,
+    hour TIME NOT NULL,
+
+    FOREIGN KEY (province) REFERENCES province(id)
+) ;
 
 COMMIT;
