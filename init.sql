@@ -6,10 +6,7 @@ CREATE TABLE SERVICE (
     name VARCHAR(100) NOT NULL -- name of the service
 ) ;
 
-CREATE TABLE REGION(
-    id INT PRIMARY KEY, -- id of the region, autoincrement
-    name VARCHAR(255) NOT NULL -- name of the region
-) ;
+
 
 -- For UNIQUE_STATION
 CREATE TABLE STATIONS (
