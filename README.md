@@ -44,7 +44,13 @@
 
 The main part of Exploratory Data Analysis is done in those two files
 - `eda.ipynb` : Exploratory Data Analysis for everything related to trains.
-- `eda_meteo.ipynb` : Exploratory Data Analysis for only the weather.
+- `eda_meteo.ipynb` : Exploratory Data Analysis for only the weather.(New eda is in the folder Belgium)
+- `eda_map_ipynb` : Exploratory Data Analysis for the geospatial dimension
+
+The main part of Modeling is done in the folder Modeling
+
+- `regression.ipynb` Where we do regression methods to estimate the delays by days or by hours
+- `classifier.ipynb` Where we do classifier methods to estimate if there is a delay or not after a certain time
 
 Files listed here are for setup purposes
 - `download_dataset.py` : Simple file that will scrape the dataset using every link found in dataset.csv
@@ -52,6 +58,7 @@ Files listed here are for setup purposes
 - `add_regions.ipynb` : This file is used to map the stations to their respective regions, along with the longitude and latitude of each station and store it in the file better_station.csv
 - `date.ipynb` : This file will check for each day if they are either a day of the week, a week-end day a school holiday or a national holiday
 - `init.sql` : SQL script to initialise tables in the database
+- `railway.sql`: SQL script to initialise the geospatial table in the database
 - `meteo.ipynb` : This file scrapes the meteo for each region using the open-meteo api
 - `import_db.ipynb` : Import every csv file into their respective table in the database.
 
