@@ -27,6 +27,7 @@ CREATE TABLE RELATION(
 
 
 CREATE TABLE TRAIN_DATA(
+    id BIGSERIAL,
     departure_date DATE,
     train_number INT,
     relation INT,
@@ -44,13 +45,12 @@ CREATE TABLE TRAIN_DATA(
     station_departure INT,
     station_arrival INT,
 
-    FOREIGN KEY (relation) REFERENCES RELATION(id),
-    FOREIGN KEY (train_service) REFERENCES SERVICE(id),
-    FOREIGN KEY (ptcar_name) REFERENCES STATIONS(id),
-    FOREIGN KEY (station_departure) REFERENCES STATIONS(id),
-    FOREIGN KEY (station_arrival) REFERENCES STATIONS(id)
-) ;
-
+    FOREIGN KEY (relation) REFERENCES relation(id),
+    FOREIGN KEY (train_service) REFERENCES service(id),
+    FOREIGN KEY (ptcar_name) REFERENCES stations(id),
+    FOREIGN KEY (station_departure) REFERENCES stations(id),
+    FOREIGN KEY (station_arrival) REFERENCES stations(id)
+);
 
 CREATE TABLE type_day (
     date DATE NOT NULL,
