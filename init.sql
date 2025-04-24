@@ -7,6 +7,10 @@ CREATE TABLE SERVICE (
 ) ;
 
 
+CREATE TABLE REGION(
+    id INT PRIMARY KEY, -- id of the region, autoincrement
+    name VARCHAR(255) NOT NULL -- name of the region
+) ;
 
 -- For UNIQUE_STATION
 CREATE TABLE STATIONS (
@@ -24,7 +28,6 @@ CREATE TABLE RELATION(
     name VARCHAR(255) NOT NULL, -- name of the relation
     type INT NOT NULL -- type of the relation
 );
-
 
 CREATE TABLE TRAIN_DATA(
     id BIGSERIAL,
